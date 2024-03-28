@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                git branch: 'main', changelog: false, credentialsId: 'pen', url: 'https://github.com/Prasannahriti031721/prasu.git'
+            }
+        }
+    }
+}
